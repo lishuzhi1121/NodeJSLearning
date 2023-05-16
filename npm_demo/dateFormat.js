@@ -1,0 +1,23 @@
+// 定义格式化时间方法
+function dateFormat(dtStr) {
+    const dt = new Date(dtStr)
+
+    const y = dt.getFullYear()
+    const m = padZero(dt.getMonth())
+    const d = padZero(dt.getDay())
+
+    const hh = padZero(dt.getHours())
+    const mm = padZero(dt.getMinutes())
+    const ss = padZero(dt.getSeconds())
+
+    return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+}
+
+// 不足两位补零函数
+function padZero(n) {
+    return n > 9 ? n : ('0' + n)
+}
+
+module.exports = {
+    dateFormat
+}
