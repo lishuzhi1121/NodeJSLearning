@@ -4,7 +4,6 @@ function dateFormat(dtStr) {
 
     const y = dt.getFullYear()
     const m = padZero(dt.getMonth() + 1)
-    // NOTE: dt.getDay() 是获取当前时间是本周的第几天, dt.getDate() 才是获取当前时间是本月的几号
     const d = padZero(dt.getDate())
 
     const hh = padZero(dt.getHours())
